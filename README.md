@@ -1,4 +1,4 @@
-## Terminal Component
+## Terminal Component `⬛ Termical`
 
 This is not an advanced terminal, it's just a simple terminal component that can be used in any React app, for more advanced terminal, check out [xterm.js](https://github.com/xtermjs/xterm.js)
 
@@ -12,15 +12,15 @@ This is not an advanced terminal, it's just a simple terminal component that can
 ## Install
 
 ```sh
-npm install terminal-react
+npm install termical
 ```
 
 ```sh
-pnpm add terminal-react
+pnpm add termical
 ```
 
 ```sh
-yarn add terminal-react
+yarn add termical
 ```
 
 ## Glossary
@@ -31,7 +31,7 @@ yarn add terminal-react
 ## Usage
 
 ```ts
-import { Terminal } from "terminal-react";
+import { Terminal } from "termical";
 
 const Demo = () => {
   return (
@@ -42,7 +42,7 @@ const Demo = () => {
 };
 
 // OR
-import { Root, Header, Body } from "terminal-react";
+import { Root, Header, Body } from "termical";
 
 const Demo = () => {
   const HEADER_HEIGHT = 24;
@@ -60,7 +60,7 @@ const Demo = () => {
 ### Add Commands
 
 ```ts
-import { Terminal } from "terminal-react";
+import { Terminal } from "termical";
 
 const Demo = () => {
   const commands = [
@@ -83,7 +83,7 @@ const Demo = () => {
 ### useTerminal
 
 ```ts
-import { useTerminal } from "terminal-react";
+import { useTerminal } from "termical"
 
 const Demo = () => {
   const { line, stack } = useTerminal();
@@ -112,7 +112,7 @@ const Demo = () => {
 ### Theming
 
 ```ts
-import { Terminal } from "terminal-react";
+import { Terminal } from "termical";
 
 const Demo = () => {
   const theme = {
@@ -365,7 +365,7 @@ In this example we used `line.update()` from `useTerminal` to create a a hook th
 - update will be called every `delay` milliseconds
 
 ```ts
-import { useTerminal } from "terminal-react";
+import { useTerminal } from "termical";
 
 const useFlashyMessage = (delay: number | null) => {
   const id = "flashy_message";
