@@ -1,0 +1,98 @@
+{
+  "name": "terminal-react",
+  "license": "MIT",
+  "version": "0.0.17",
+  "description": "A simple reactjs component to display a terminal",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vitest && ts-node src/playground.tsx",
+    "test": "vitest run",
+    "build": "tsup",
+    "lint": "tsc",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run lint && pnpm run test && pnpm run build && changeset publish"
+  },
+  "peerDependencies": {
+    "@radix-ui/react-scroll-area": ">=1.0.3",
+    "csstype": ">=3.1.1",
+    "html-react-parser": ">=3.0.12",
+    "react": ">=17",
+    "react-dom": ">=17",
+    "react-textarea-autosize": ">=8.4.0",
+    "ts-deepmerge": ">=6.0.2",
+    "zustand": ">=4.3.6"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@types/node": "^18.15.1",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norassystemes/terminal-react"
+  },
+  "author": {
+    "name": "Noras"
+  },
+  "keywords": [
+    "terminal",
+    "react",
+    "ssr",
+    "component",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/norassystemes/terminal-react/issues"
+  },
+  "homepage": "https://github.com/norassystemes/terminal-react#readme",
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@radix-ui/react-scroll-area": "^1.0.3",
+    "csstype": "^3.1.1",
+    "html-react-parser": "^3.0.12",
+    "react-textarea-autosize": "^8.4.0",
+    "ts-deepmerge": "^6.0.2",
+    "zustand": "^4.3.6"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "treeshake": true,
+    "sourcemap": true,
+    "minify": true,
+    "clean": true,
+    "dts": true,
+    "splitting": false,
+    "injectStyle": true,
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "external": [
+      "react",
+      "react-dom",
+      "react-textarea-autosize",
+      "html-react-parser",
+      "csstype",
+      "zustand",
+      "@radix-ui/react-scroll-area",
+      "ts-deepmerge"
+    ]
+  }
+}
