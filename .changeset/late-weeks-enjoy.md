@@ -1,0 +1,5 @@
+---
+"terminal-react": patch
+---
+
+init
