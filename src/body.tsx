@@ -175,10 +175,15 @@ export const Body = React.forwardRef<HTMLDivElement, BodyProps>(
       const _command = commands?.find((c) =>
         e.currentTarget.value.startsWith(c.text)
       );
-      const command = !_command?.exact
-        ? _command
-        : _command.text === e.currentTarget.value
-        ? _command
+      const exact =
+        typeof _command?.exact === "boolean" ? _command.exact : true;
+
+      const command = _command
+        ? exact
+          ? e.currentTarget.value === _command.text
+            ? _command
+            : undefined
+          : _command
         : undefined;
 
       useLines.getState().add({

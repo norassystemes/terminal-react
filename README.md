@@ -498,3 +498,16 @@ const Demo = () => {
 // 👋👋 Hello World! <--- after clicking the button
 // 👋👋 Hello World! <--- after clicking the button again
 ```
+
+### No persistent history
+
+```ts
+const { line, stack } = useTerminal();
+
+useEffect(() => {
+  line.reset();
+
+  // also reset the history
+  // stack.reset();
+}, []);
+```
