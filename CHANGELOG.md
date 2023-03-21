@@ -1,5 +1,11 @@
 # terminal-react
 
+## 0.0.20
+
+### Patch Changes
+
+- 3b4b585: fixed `exact` logic
+
 ## 0.0.19
 
 ### Patch Changes
